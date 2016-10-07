@@ -1,0 +1,29 @@
+Creación de página web en Github con Jekyll y Githubpages usando Markdown.
+ 1. Lo primero que tenemos que hacer es crear un repositorio en github. En mi caso he creado este: https://github.com/adrian731/adrian731.github.io
+ Recibe este nombre para que la página resultante sea: adrian731gg.github.io
+ 2.Después lo que hice fue instalar Jekyll en local con apt-get install jekyll. Después seguí los pasos de este tutorial https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/
+ 3.Acto seguido cloné el repositorio que creé en local y empecé a trabajar ahí. 
+    - Creé la carpeta -layouts que no se me creó y metí dentro un index.html que tenía la ruta del css.
+    - Modifiqué el about.md y e hice el currículum de Kenny Mccormick (personaje de South Park)
+    - Luego en el index.md creé un link al currículum de Kenny.
+    - A todos los archivos .md les he puesto el título y el layout que van a usar, en mi caso default.
+ 4. Características de Markdown:
+    - En las páginas con Jekyll se pueden usar etiquetas de html como <br> y las etiquetas ce Markdown, como por ejemlplo los <hx></h>
+    # Esta línea está en H1 #
+    ## Esta línea está e H2 ##
+    ### Esta línea está e H3 ###
+     - El resto de estructuras de Markdown los he usado de esta documentación: https://daringfireball.net/projects/markdown/syntax
+ 5.- Una vez terminada la configuración de la página en local las he subido al repositorio siguiendo los siguientes pasos:
+     - Lo primero fue crear una clave ssh con ssh-keygen -t rsa -b 4096 -C
+     - Copio lo que hay en el archivo /users/adrian/.ssh/id_rsa_pub y añado la clave en la configuración de mi github
+     - Después realizo los siguientes comandos:
+        - git add *
+        - git commit -am "Comentario"
+        - git push
+ 6.- Una vez comprobado que todo está subido comprobar la página en adrian731.github.io
+ 
+ 
+ 
+ 
+ Nota: Otra forma podría haber sido creando la página automáticamente con githubpages con el botón en opciones de: Launch automatic page generator
+ Después solo habría que modificar el css y los archivos index.html, index.md y about.md.
